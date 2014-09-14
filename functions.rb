@@ -1,12 +1,12 @@
 # Return a reversed copy of the array
 def reverse(an_array)
-  # write your code here
+  [3, 6, 'dog'].reverse
 end
 
 # Return a map of letters and counts of letters
 # Letters should be lowercase before counting
 # For example, histogram('Hello') returns {'h'=>1, 'e'=>1, 'l'=>2, 'o'=>1}
-def histogram(a_string
+def histogram(a_string)
   # write your code here
 end
 
@@ -26,12 +26,26 @@ end
 # Otherwise, the elemnt is simply the value of i
 # For example [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', ..., 14, 'FizzBuzz', ...]
 def fizzbuzz
-  #write your code here
+(1..100).each do |n|
+    i_3=(n%3==0)
+    i_5=(n%5==0)
+    case
+        when i_3&&i_5
+            puts 'FizzBuzz'
+        when i_3
+            puts 'Fizz'
+        when i_5
+            puts 'Buzz'
+        else
+            puts n
+    end
 end
-
+end
+             
+             
 # Uncomment each of these to test your functions
-# puts revers([3,6,'dog']).inspect
+puts reverse([3,6,'dog']).inspect
 # puts histogram('The Quick brown fox').inspect
 # puts sum_only_numbers [4, 'foo', [ ], 27, : rain, 3.14
-# puts fizzbuzz.join("\")
+puts fizzbuzz.join("\n")
 
