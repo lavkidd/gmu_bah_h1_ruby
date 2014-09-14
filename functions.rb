@@ -26,22 +26,44 @@ end
 # Otherwise, the elemnt is simply the value of i
 # For example [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', ..., 14, 'FizzBuzz', ...]
 def fizzbuzz
-(1..100).each do |n|
-    i_3=(n%3==0)
-    i_5=(n%5==0)
+#    an_array []
+  (1..100).each do |n|
+    i_3  = ( n %  3 == 0 )
+    i_5  = ( n %  5 == 0 )
+    i_15 = ( n % 15 == 0 )
     case
-        when i_3&&i_5
-            puts 'FizzBuzz'
-        when i_3
-            puts 'Fizz'
-        when i_5
-            puts 'Buzz'
-        else
-            puts n
+      when i_15
+        puts 'FizzBuzz'
+      when i_3
+        puts 'Fizz'
+      when i_5
+        puts 'Buzz'
+      else
+        puts n
+      end
     end
+#      return an_array
 end
-end
-             
+
+#  Tried to get this to work ...
+#  Was not successful
+#  CRAZY ... CRAZY ... CRAZY!!!!!!!!
+#  def fizzbuzz(max)
+#    lavk []
+#    (1 .. max).each do |n|
+#      if (n % 15 == 0)
+#        lavk << 'FizzBuzz'
+#      elsif (n % 3 == 0)
+#        lavk << 'Fizz'
+#      elsif (n % 5 == 0)
+#        lavk << 'Buzz'
+#      else
+#        lavk << n
+#      end
+#    end
+#    return lavk
+#  end
+
              
 # Uncomment each of these to test your functions
 puts reverse([3,6,'dog']).inspect
